@@ -6,45 +6,38 @@
 	<!-- Collection of nav links, forms, and other content for toggling -->
 	<div id="navbarCollapse" class="collapse navbar-collapse justify-content-start">
 		<div class="navbar-nav ml-auto">
-		
-		</div>
-		<div class="navbar-nav ml-auto">
-			<a href="#" class="nav-item nav-link"><i class="fa fa-sign-in"></i> Đăng nhập</a>
-			<a href="#" class="nav-item nav-link"><i class="fa fa-user-o"></i> Đăng ký</a>
+			<a href="#" class="nav-item nav-link" [routerLink]="['/authentication/login']"><i class="fa fa-sign-in"></i> Đăng nhập</a>
+			<a href="#" class="nav-item nav-link" [routerLink]="['/authentication/sign-up']"><i class="fa fa-user-o"></i> Đăng ký</a>
 			<div class="nav-item dropdown login-dropdown">
-				<!--				<a href="#" class="nav-item nav-link"><i class="fa fa-sign-in"></i> Đăng nhập</a>-->
-				<!--				<a href="#" class="nav-item nav-link"><i class="fa fa-user-o"></i> Đăng ký</a>-->
 				<a href="#" data-toggle="dropdown" class="nav-item nav-link dropdown-toggle"><i
 					class="fa fa-user-o"></i> Nguyễn Văn A</a>
 				<div class="dropdown-menu">
-					<a href="#" class="dropdown-item">
-						<i class="fa fa-users"></i>
-						<span class="ml-3">Quản lý nhân viên</span>
-					
+					<a href="#" class="dropdown-item" [routerLink]="['/admin/employee-management']">
+						<span><i class="fa fa-address-book-o" ></i> Quản lý nhân viên</span>
 					</a>
-					<a href="#" class="dropdown-item"><i class="fa fa-users"></i> <span
-						class="ml-3">Quản lý khách hàng</span>
+					<a href="#" class="dropdown-item" [routerLink]="['/employee/customer-management']">
+						<span><i class="fa fa-users" ></i> Quản lý khách hàng</span>
 					</a>
-					<a href="#" class="dropdown-item"><i class="fa fa-car"></i><span
-						class="ml-3">Quản lý xe đã đăng ký</span>
+					<a href="#" class="dropdown-item" [routerLink]="['/employee/registered-car-management']">
+						<span><i class="fa fa-car"></i> Quản lý xe đã đăng ký</span>
 					</a>
-					<a href="#" class="dropdown-item"><i class="fa fa-car"></i><span
-						class="ml-3">Quản lý xe vào/ra</span> </a>
-					<a href="#" class="dropdown-item"><i class="fa fa-dollar"></i><span
-						class="ml-4">Quản lý thu chi</span> </a>
-					<a href="#" class="dropdown-item"><i class="fa fa-bar-chart"></i><span
-						class="ml-3">Thống kê</span> </a>
-					<a href="#" class="dropdown-item"><i class="fa fa-sign-out"></i><span
-						class="ml-3">Đăng xuất</span> </a>
-					<!--						<a href="#" class="dropdown-item"><i class="fa fa-sign-out"></i><span-->
-					<!--							class="ml-3">Đăng xuất</span> </a>-->
-					<!--						<a href="#" class="dropdown-item"><i class="fa fa-sign-out"></i><span-->
-					<!--							class="ml-3">Đăng xuất</span> </a>-->
-					<!--						<a href="#" class="dropdown-item"><i class="fa fa-sign-out"></i><span-->
-					<!--							class="ml-3">Đăng xuất</span> </a>-->
-					<!--						<a href="#" class="dropdown-item"><i class="fa fa-sign-out"></i><span-->
-					<!--							class="ml-3">Đăng xuất</span> </a>-->
-				
+					<a href="#" class="dropdown-item" [routerLink]="['/employee/entry-management']">
+						<span><i class="fa fa-video-camera"></i> Quản lý xe vào/ra</span>
+					</a>
+					<a href="#" class="dropdown-item" [routerLink]="['/employee/ticket-management']">
+						<span><i class="fa fa-id-card-o"></i> Quản lý vé</span>
+					</a>
+					<a href="#" class="dropdown-item" [routerLink]="['/employee/parking-lot-management']">
+						<span><i class="fa fa-building-o"></i> Quản lý bãi đỗ</span>
+					</a>
+<!--					<a href="#" class="dropdown-item" [routerLink]="['/employee/sales-management']">-->
+<!--						<span><i class="fa fa-dollar"></i> Quản lý thu chi</span>-->
+<!--					</a>-->
+					<a href="#" class="dropdown-item" [routerLink]="['/admin/statistic']">
+						<span><i class="fa fa-bar-chart"></i> Thống kê</span> </a>
+					<a href="#" class="dropdown-item" [routerLink]="['/authentication/sign-up']">
+						<span><i class="fa fa-sign-out"></i> Đăng xuất</span>
+					</a>
 				</div>
 			</div>
 		</div>
